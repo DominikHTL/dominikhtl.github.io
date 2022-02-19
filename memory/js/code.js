@@ -2,7 +2,7 @@ let openCards = [];
 let numberCards = 16;
 let count = 0;
 let list = []
-let picture = ["../img/baljeet.png", "../img/buford.png", "../img/doofenschmirtz.png", "../img/ferb.png", "../img/isabella.png", "../img/perry.png", "../img/phineas.png", "../img/Candice.png"]
+let picture = ["./img/baljeet.png", "./img/buford.png", "./img/doofenschmirtz.png", "./img/ferb.png", "./img/isabella.png", "./img/perry.png", "./img/phineas.png", "./img/Candice.png"]
 let found = 0
 
 let firstClick = 0
