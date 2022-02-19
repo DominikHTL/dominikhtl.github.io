@@ -4,6 +4,34 @@
     box-sizing: border-box;
 }
 
+#top_div{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+#top_ul li {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    display: inline;
+}
+
+#countdown{
+    padding-left: 250px;
+}
+
+#name{
+    padding-left: 205px;
+}
+
+#highscore{
+    padding-left: 250px;
+}
+
+
+
 #container{
     margin: auto;
     margin-top: 100px;
@@ -29,4 +57,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+
+.flipped{
+    border-radius: 10px;
+    margin: 0.05vw;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.hiddenImage{
+    width: 95px;
+    height: 95px;
+    visibility: hidden;
+    
 }
