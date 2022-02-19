@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#top_div{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+}
+
+#top_ul li {
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    display: inline;
+}
+
+#name{
+    padding-left: 540px;
+}
