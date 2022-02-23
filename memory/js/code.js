@@ -1,16 +1,15 @@
-let openCards = [];
 let numberCards = 16;
+let cards = []
 let count = 0;
 let list = []
 let picture = ["./img/baljeet.png", "./img/buford.png", "./img/doofenschmirtz.png", "./img/ferb.png", "./img/isabella.png", "./img/perry.png", "./img/phineas.png", "./img/Candice.png"]
 let found = 0
 
+
 let firstClick = 0
 let countTime = 0
 let timeractive = false
 let playInterval
-let highscore = 0
-let score = 0
 
 createDeck(numberCards)
 
@@ -20,7 +19,6 @@ function createDeck(numberCards) {
     let container = document.querySelector('#container');
     container.innerHTML = "";
 
-    let cards = []
     for (let index = 0; index < numberCards / 2; index++) {
         cards.push(index);
         cards.push(index);
@@ -40,7 +38,6 @@ function createDeck(numberCards) {
             let div = document.createElement('div');
             let img = document.createElement('img');
             div.type = cards[n];
-            // div.innerHTML = cards[n]
             div.className = "mem";
             img.className = "hiddenImage";
             img.src = picture[cards[n]];
@@ -98,18 +95,7 @@ function compareCards(list){
     if (list[0].type == list[1].type){
         found ++
         if (numberCards == 16){
-            if (found == 8){
-                found = 0
-                if (highscore == 0){                    
-                    alert('Congratulations! You reached a new highscore.')
-                    highscore = countTime
-                    document.querySelector('#highscore').innerHTML = 'Highscore: ' + highscore + 's'
-                }
-                else if (highscore > countTime){
-                    alert('Congratulations! You reached a new highscore.')
-                    highscore = countTime
-                    document.querySelector('#highscore').innerHTML = 'Highscore: ' + highscore + 's'
-                }
+            if (found == 8){            
                 clearInterval(playInterval)
                 timeractive = false
                 firstClick = 0
@@ -121,9 +107,12 @@ function compareCards(list){
                         document.querySelector('#countdown').innerHTML = 'Time: ' + countTime + 's'
                     })
                 }, 2000)
+                found = 0
+                
             }
         }
     }
+
     else{
         setTimeout(() => {
             list[0].classList.toggle("flipped")
